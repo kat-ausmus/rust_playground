@@ -2,6 +2,7 @@ use std::io;
 use std::cmp::Ordering;
 
 pub fn play() {
+    print!("{esc}[2J{esc}[1;1H", esc = 27 as char);
     println!("Guess the number!");
     let secret_number = rand::random_range(1..=100);
     let mut num_guesses = 0;
